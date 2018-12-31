@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        /*
+        쓰레드를 강제 종료 할 방법이 없기 때문에 쓰레드를 종료하기 위한 플래그를 만들어 주고
+        앱이 종료 될 때 플래그를 바꾸어 사용자 정의 쓰레드도 없애 준다.
+        */
         isRunning = false
     }
 }
